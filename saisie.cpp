@@ -8,7 +8,19 @@ Description    : Définitions des fonctions de la librairie saisie
 Compilateur    : Mingw-w64 g++ 8.1.0
 -----------------------------------------------------------------------------------------
 */
-
+#include <iostream>
 #include "saisie.h"
 
-using namespace std;
+
+int saisirInt(std::string message, int min, int max /*,std::string MSG_ERROR*/){
+
+    int saisie;
+
+    std::cout << message << "[" << min << "-" << max << "]";
+    std::cin >> saisie;
+
+    return saisie;
+
+}
+
+

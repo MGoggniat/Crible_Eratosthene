@@ -12,3 +12,17 @@ Compilateur    : Mingw-w64 g++ 8.1.0
 #include "annexe_tableau.h"
 
 using namespace std;
+
+void initTableauC(char tableau[], int taille, char valeur){
+
+    for (int position = 0; position < taille; ++position){
+        tableau[position] = valeur;
+    }
+}
+
+void afficherTableauC(char tableau[], int taille, int nbCol){
+    for(int position = 0; position < taille; ++position){
+
+    }
+}
+

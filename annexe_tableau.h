@@ -20,7 +20,10 @@ Compilateur    : Mingw-w64 g++ 8.1.0
 * @param param2 : -
 * @return       : -
 */
-void afficherTableauC(char tableau[], int taille, int nbCol);
 
 void initTableauC(char tableau[], int taille, char valeur);
+
+
+void afficherTableauC(char tableau[], int taille, int nbCol);
+
 #endif
