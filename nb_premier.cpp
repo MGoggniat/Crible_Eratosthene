@@ -10,5 +10,14 @@ Compilateur    : Mingw-w64 g++ 8.1.0
 */
 
 #include "nb_premier.h"
-
+#include <cmath>
 using namespace std;
+
+bool estPremier(int nombre){
+	for(int i = 2; i <= sqrt(nombre); ++i){
+		if(!(nombre % i)){
+			return false;
+		}
+	}
+	return (bool)--nombre;
+}

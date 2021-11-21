@@ -20,7 +20,7 @@ Compilateur    : Mingw-w64 g++ 8.1.0
 * @param param2 : -
 * @return       : -
 */
-void cribler(char nombres[], int nbNombre);
+int cribler(char nombres[], int nbNombre, char carac);
 
 /**
 * Description   : -
@@ -29,5 +29,5 @@ void cribler(char nombres[], int nbNombre);
 * @param param2 : -
 * @return       : -
 */
-void listeNbPremier(char nombres[], int nbNombre, bool enLigne, int nbCol = -1);
+void listeNbPremier(const char nombres[], int nbNombre, char carac, bool enLigne, int nbCol = -1);
 #endif

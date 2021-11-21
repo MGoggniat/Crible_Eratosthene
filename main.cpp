@@ -11,6 +11,7 @@ Compilateur    : Mingw-w64 g++ 8.1.0
 
 #include "saisie.h"
 #include "annexe_tableau.h"
+#include "criblage_era.h"
 
 using namespace std;
 
@@ -48,7 +49,14 @@ int main() {
 
     //initilisation et affichage du tableau de caractère
     initTableauC(tab, saisie, VALEURTABLEAUCHAR);
+	cout << endl << "initialistion du tableau" << endl;
     afficherTableauC(tab,saisie, NBRCOLONNETABLEAU);
+	int nbPremier = cribler(tab,saisie,'X');
+	cout << endl << endl << "criblage du tableau" << endl;
+	afficherTableauC(tab,saisie, NBRCOLONNETABLEAU);
+	cout << endl;
+	cout << "Il y a " << nbPremier << " nbres premier" << endl;
+	listeNbPremier(tab,saisie,VALEURTABLEAUCHAR, false, NBRCOLONNETABLEAU);
 
     /******************************************************************************
      Fin du programme
