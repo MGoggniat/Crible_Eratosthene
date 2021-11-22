@@ -24,6 +24,7 @@ void afficherTabBol(const bool tab[], int taille, char non, char oui, int nbCol)
         cout << (tab[position] ? oui : non) << " ";
         ++col;
 
+		//retour à la ligne si besoin
         if(col == nbCol){
             cout << endl;
             col = 0;

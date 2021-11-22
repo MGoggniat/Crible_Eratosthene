@@ -21,7 +21,7 @@ int criblerEra(bool nombres[], int nbNombre){
 
 	int nbPremier = nbNombre;//décrémenter pour chaque nombre non-premier
 
-	//1 n'est pas premier
+	//cribler 1, car il n'est pas premier
 	nombres[0] = true;
 	--nbPremier;
 

@@ -14,19 +14,13 @@ Compilateur    : Mingw-w64 g++ 8.1.0
 #define ANNEXE_TABLEAU_H
 
 /**
- * @fn afficherTableauC()
- *
- *
- * @brief Description   : La fonction affiche ce que contient le tableau
- *
- * le tableau est affiché sur un nombre de colonne donnée par le programmeur et
- * peux afficher  caractère comme plusieurs.
- *
- * @param tableau : reçoit le tableau que l'on veut initialiser
- * @param taille : défini la taille du tableau
- * @param nbCol : défini combien de caractère sont affiché sur une ligne
- *
- * @return       : -
+ * Description    : Affiche un tableau de caractère en fonction des valeurs binaire du
+ *                  tableau "tab" en entrée, (char oui si true, sinon char non)
+ * @param tab     : tableau de booléen
+ * @param taille  : défini la taille du tableau
+ * @param non     : caractère à afficher si false
+ * @param oui     : caractère à afficher si true
+ * @param nbCol   : défini combien de caractère sont affiché sur une ligne
 */
 void afficherTabBol(const bool tab[], int taille, char non, char oui, int nbCol);
 #endif

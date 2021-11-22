@@ -14,9 +14,6 @@ Compilateur    : Mingw-w64 g++ 8.1.0
 #define SAISIE_H
 
 /**
- * @fn saisirInt()
- *
- *
  * @brief Description   : La fonction demande à l'utilisateur d'entré une valeur
  *                        entre la borne min et la borne max défini
  *

@@ -27,7 +27,7 @@ int saisirInt(const string& MESSAGE,const int MIN,const int MAX,const string& MS
         cin >> saisie;
 
         // Vérifie qu'un caractère correct à été entré par l'utilisateur
-        erreur = cin.fail() || !(saisie >= MIN && saisie < MAX);
+        erreur = cin.fail() || !(saisie >= MIN && saisie <= MAX);
 
         //si un mauvais caractère à été saisi un message d'erreur est affiché
         if (erreur) {
