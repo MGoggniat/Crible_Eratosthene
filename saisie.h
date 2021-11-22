@@ -12,12 +12,6 @@ Compilateur    : Mingw-w64 g++ 8.1.0
 
 #ifndef SAISIE_H
 #define SAISIE_H
-#include <string>
-#include <iostream>
-#include <cstdlib>
-#include <limits>
-
-//#define MSG_ERROR //todo changer ca
 
 /**
  * @fn saisirInt()
@@ -33,17 +27,15 @@ Compilateur    : Mingw-w64 g++ 8.1.0
  * valeur qui est entre les bornes min et max un message d'erreur s'affiche et le
  * programme redemande à l'utilisateur d'entré une valeur.
  *
- * Une fois que la valeur correct est entrée, ce dernier est retournée où la
+ * Une fois que la valeur correct est entrée, cette derniere est retournée où la
  * fonction à été appelée
  *
- *
- * @param MESSAGE : message de demande à l'utilisateur
- * @param MIN : nbr minimum que l'utilisateur peux saisir
- * @param MAX : nbr maximum que l'utilisateur peux saisir
+ * @param MESSAGE   : message de demande à l'utilisateur
+ * @param MIN       : nbr minimum que l'utilisateur peux saisir
+ * @param MAX       : nbr maximum que l'utilisateur peux saisir
  * @param MSG_ERROR : message afficher lors d'une saisie incorrect
  *
  * @return       : valeur saisie par l'utilisateur
 */
-int saisirInt(const std::string MESSAGE, const int MIN, const int MAX ,const
-                std::string MSG_ERROR);
+int saisirInt(const std::string& MESSAGE,int MIN,int MAX,const std::string& MSG_ERROR);
 #endif

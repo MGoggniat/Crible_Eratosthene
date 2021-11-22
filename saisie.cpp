@@ -8,19 +8,22 @@ Description    : Définitions des fonctions de la librairie saisie
 Compilateur    : Mingw-w64 g++ 8.1.0
 -----------------------------------------------------------------------------------------
 */
+#include <string>
+#include <iostream>
+#include <limits>
 #include "saisie.h"
+#include <cassert>
 
 using namespace std;
 
-int saisirInt(const string MESSAGE, const int MIN, const int MAX ,const string
-                MSG_ERROR){
-
+int saisirInt(const string& MESSAGE,const int MIN,const int MAX,const string& MSG_ERROR){
+	assert(MIN <= MAX);
     bool erreur;
     int saisie;
 
     do{
         //Entrée utilisateur
-        cout << MESSAGE << "[" << MIN << "-" << MAX << "]" << " :";
+        cout << MESSAGE << " [" << MIN << "-" << MAX << "]" << " :";
         cin >> saisie;
 
         // Vérifie qu'un caractère correct à été entré par l'utilisateur
@@ -35,11 +38,9 @@ int saisirInt(const string MESSAGE, const int MIN, const int MAX ,const string
         //vider buffer
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
-
     }while(erreur);
 
     return saisie;
-
 }
 
 

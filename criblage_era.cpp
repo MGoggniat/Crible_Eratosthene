@@ -13,6 +13,7 @@ Compilateur    : Mingw-w64 g++ 8.1.0
 #include <iostream>
 #include <cmath>
 #include <iomanip>
+#include <cassert>
 
 using namespace std;
 
@@ -27,18 +28,23 @@ int criblerEra(bool nombres[], int nbNombre){
 	//il faut retirer tous les multiple des nombre compris entre 2 et racine carré du
 	// plus grand nombre
 	for(int nombre = 2; nombre <= sqrt(nbNombre); ++nombre){
-		for(int nombreAVerifier = nombre + 1; nombreAVerifier <= nbNombre; ++nombreAVerifier){
-			if(!nombres[nombreAVerifier - 1] && !(nombreAVerifier % nombre)){
-				nombres[nombreAVerifier - 1] = true;
-				--nbPremier;
+		if(!nombres[nombre - 1])
+		{
+			for (int nombreAVerifier = nombre + 1; nombreAVerifier <= nbNombre; ++nombreAVerifier)
+			{
+				if (!nombres[nombreAVerifier - 1] && !(nombreAVerifier % nombre))
+				{
+					nombres[nombreAVerifier - 1] = true;
+					--nbPremier;
+				}
 			}
 		}
 	}
 	return nbPremier;
 }
 
-void listeNbPremier(const bool tab[], int nbNombre, char carac, bool enLigne, int nbCol){
-
+void listeNbPremier(const bool tab[], int nbNombre, bool enLigne, int nbCol){
+	assert(nbNombre > 0 && (enLigne || (nbCol > 0)));
 	//largeur pour afficher les nombres
 	int const marge = 2;
 	int largeurMax = (int)log10(nbNombre) + 1 + marge;

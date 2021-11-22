@@ -12,7 +12,6 @@ Compilateur    : Mingw-w64 g++ 8.1.0
 
 #ifndef ANNEXE_TABLEAU_H
 #define ANNEXE_TABLEAU_H
-#include <iostream>
 
 /**
  * @fn afficherTableauC()
