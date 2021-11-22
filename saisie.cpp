@@ -20,7 +20,7 @@ int saisirInt(const string MESSAGE, const int MIN, const int MAX ,const string
 
     do{
         //Entrée utilisateur
-        cout << MESSAGE << "[" << MIN << "-" << MAX << "]" << " :";
+        cout << MESSAGE << " [" << MIN << "-" << MAX << "]" << " :";
         cin >> saisie;
 
         // Vérifie qu'un caractère correct à été entré par l'utilisateur
