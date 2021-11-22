@@ -10,18 +10,9 @@ Compilateur    : Mingw-w64 g++ 8.1.0
 */
 
 #include "annexe_tableau.h"
+using namespace std;
 
-
-void initTableauC(char tableau[], int taille, char valeur){
-
-    //boucle qui assigne un et un seul caractère à tout le tableau
-    for (int position = 0; position < taille; ++position){
-        tableau[position] = valeur;
-    }
-
-}
-
-void afficherTableauC(char tableau[], int taille, int nbCol){
+void afficherTabBol(const bool tab[], int taille, char non, char oui, int nbCol){
 
     int colonne_actuel = 0;
 
@@ -29,11 +20,11 @@ void afficherTableauC(char tableau[], int taille, int nbCol){
     // colonne souhaité
     for(int position = 0; position < taille; ++position){
 
-        std::cout << tableau[position] << " ";
+        cout << (tab[position] ? oui : non) << " ";
         ++colonne_actuel;
 
         if(colonne_actuel == nbCol){
-            std::cout << std::endl;
+            cout << endl;
             colonne_actuel = 0;
         }
     }

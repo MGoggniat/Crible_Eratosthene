@@ -1,6 +1,6 @@
 /*
 -----------------------------------------------------------------------------------------
-Nom du fichier : main
+Nom du fichier : main.cpp
 Nom de labo    : Crible_Eratosthene
 Auteur(s)      : Michael Gogniat /
 Date creation  : 18.11.2021
@@ -22,15 +22,18 @@ int main() {
 
     const string MSG_SAISIE = "Veuillez saisir une valeur ";
     const string MSG_ERREUR = "Veuillez entrez une valeur valide";
-    const char VALEURTABLEAUCHAR = 'O';
-    const int NBRCOLONNETABLEAU = 10;
-    const int MIN = 1;
-    const int MAX = 100;
+    const int NB_COL_TABLEAU = 10;
+	const int NB_COL_LISTE = 10;
+    const int NOMBRE_MIN = 1;
+    const int NOMBRE_MAX = 100;
+	const char premier = 'O';
+	const char nonPremier = 'X';
 
 
     /******************************************************************************
      Message d'accueil du programme
     ******************************************************************************/
+
     cout << "Bonjour," << endl << "Ce programme vous donne les nombres "
                                   "premier en fonction d'un nombre maximum "
                                   "que vous saisirez, ceci est effectue en "
@@ -42,21 +45,22 @@ int main() {
      ******************************************************************************/
 
     //saisie utilisateur
-    int saisie = saisirInt(MSG_SAISIE, MIN, MAX, MSG_ERREUR);
-
-    //déclaration taille du tableau
-    char tab[saisie];
+    int nbNombre = saisirInt(MSG_SAISIE, NOMBRE_MIN, NOMBRE_MAX, MSG_ERREUR);
 
     //initilisation et affichage du tableau de caractère
-    initTableauC(tab, saisie, VALEURTABLEAUCHAR);
+	bool tab[NOMBRE_MAX] = {};
 	cout << endl << "initialistion du tableau" << endl;
-    afficherTableauC(tab,saisie, NBRCOLONNETABLEAU);
-	int nbPremier = cribler(tab,saisie,'X');
+    afficherTabBol(tab, nbNombre, premier, nonPremier, NB_COL_TABLEAU);
+
+	//criblage
+	int nbPremier = criblerEra(tab,nbNombre);
+
+	//résultat du criblage
 	cout << endl << endl << "criblage du tableau" << endl;
-	afficherTableauC(tab,saisie, NBRCOLONNETABLEAU);
+	afficherTabBol(tab, nbNombre, premier, nonPremier, NB_COL_TABLEAU);
 	cout << endl;
 	cout << "Il y a " << nbPremier << " nbres premier" << endl;
-	listeNbPremier(tab,saisie,VALEURTABLEAUCHAR, false, NBRCOLONNETABLEAU);
+	listeNbPremier(tab,nbNombre,VALEURTABLEAUCHAR, false, NB_COL_LISTE);
 
     /******************************************************************************
      Fin du programme

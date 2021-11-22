@@ -15,21 +15,6 @@ Compilateur    : Mingw-w64 g++ 8.1.0
 #include <iostream>
 
 /**
- * @fn intiTableauC()
- *
- *
- * @brief Description   : La fonction d'initialisation d'un tableau de caractère
- *                        assigne un et un seul caractère à tout notre tableau
- *
- * @param tableau : reçoit le tableau que l'on veut initialiser
- * @param taille : défini la taille du tableau
- * @param valeur : caractère que l'on assigne à tout le tableau
- *
- * @return       : -
-*/
-void initTableauC(char tableau[], int taille, char valeur);
-
-/**
  * @fn afficherTableauC()
  *
  *
@@ -44,6 +29,5 @@ void initTableauC(char tableau[], int taille, char valeur);
  *
  * @return       : -
 */
-void afficherTableauC(char tableau[], int taille, int nbCol);
-
+void afficherTabBol(const bool tab[], int taille, char non, char oui, int nbCol);
 #endif
